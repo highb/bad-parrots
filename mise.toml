@@ -1,0 +1,15 @@
+[tools]
+"aqua:charmbracelet/gum" = "0.14.5"
+
+[env]
+VOLUMES_DIR = "{{env.PWD}}/volumes"
+OLLAMA_DIR = "{{env.VOLUMES_DIR}}/ollama"
+OLLAMA_VERSION = "latest"
+OPEN_WEBUI_DIR = "{{env.VOLUMES_DIR}}/open-webui"
+OPEN_WEBUI_VERSION = "main"
+
+[tasks.nvidia_sanity_check]
+description = "Check if nvidia-smi is working inside of docker"
+run = [
+  "sudo docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi"
+]
