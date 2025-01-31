@@ -5,6 +5,10 @@
 Some mise scripts for setting up my local LLM environment. Maybe you'll find them
 useful. Review them before running, since my local setup might not work for you.
 
+## Why no worky?
+
+If you're on Apple silicon (M1, M4, etc) then uh, [docker no worky](https://chariotsolutions.com/blog/post/apple-silicon-gpus-docker-and-ollama-pick-two/).
+
 ## Usage
 
 1. Install [mise](https://mise.jdx.dev/)
