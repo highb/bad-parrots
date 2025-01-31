@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "This is probably too sketch to use"
+exit 1
+
 # Create ~/bin, if it doesn't exist
 if [ ! -d ~/bin ]; then
     mkdir -p ~/bin

@@ -31,7 +31,9 @@ fi
 
 if lspci | grep -i nvidia; then
     # If nvidia, run with --gpus=all
-    sudo docker run --runtime=nvidia -d --gpus=all -v "${OLLAMA_DIR}":/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+    sudo docker run --runtime=nvidia -d --gpus=all -v "${OLLAMA_DIR}":/root/.ollama -p 11434:11434  --name ollama ollama/ollama
+    # Expose to LAN at your own risk lol
+    #sudo docker run --runtime=nvidia -d --gpus=all -v "${OLLAMA_DIR}":/root/.ollama -p 10.0.30.10:11434:11434  --name ollama ollama/ollama
 else
     sudo docker run -d --device /dev/kfd --device /dev/dri -v "${OLLAMA_DIR}":/root/.ollama -p 11434:11434 --name ollama ollama/ollama:rocm
 fi
