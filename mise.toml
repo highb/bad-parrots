@@ -1,5 +1,5 @@
 [tools]
-"aqua:charmbracelet/gum" = "0.17.0"
+"aqua:charmbracelet/gum" = "2.0.2"
 
 [env]
 VOLUMES_DIR = "{{env.PWD}}/volumes"
